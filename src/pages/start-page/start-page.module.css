@@ -1,14 +1,16 @@
 .wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-image: url(../../assets/images/bg-main.jpg);  
+    background-image: url(../../assets/images/bg-main.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .start_info {
     display: flex;
     justify-content: center;
@@ -19,8 +21,53 @@
     padding: 20px 45px;
     font-size: 48px;
     text-align: center;
-    color: #fff;
-    background-color: rgba(31, 112, 127, .3); 
+    background-color: rgba(31, 112, 127, .5);
     border: 3px solid #278D9F;
     border-radius: 20px;
+    z-index: 2;
+}
+
+.ball {
+    position: absolute;
+    z-index: 1;
+}
+
+.ball_left {
+    top: 150px;
+    left: calc(50% - 550px);
+    width: 400px;
+}
+
+.ball_left img {
+    width: 100%;
+}
+
+.ball_right {
+    top: 150px;
+    right: calc(50% - 500px);
+    width: 200px;
+}
+
+.ball_left::before {
+    content: "";
+    width: 5px;
+    height: 223px;
+    position: absolute;
+    background-color: #7B7B7B;
+    top: -217px;
+    left: 50%;
+}
+
+.ball_right::before {
+    content: "";
+    width: 5px;
+    height: 220px;
+    position: absolute;
+    background-color: #7B7B7B;
+    top: -217px;
+    left: calc(50% - 3px);
+}
+
+.ball_right img {
+    width: 100%;
 }

@@ -1,0 +1,60 @@
+.filter_wrapper{
+    margin-top: 20px;
+    padding: 20px 50px;
+    border-radius: 10px;
+    background-color: rgba(31, 112, 127, .3);
+}
+
+.line_filter{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+}
+.icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.color_icon {
+    width: 30px;
+    height: 30px;
+    margin: 15px 10px;
+    border: 1px solid #278D9F;
+    border-radius: 5px;
+}
+.input{
+    display: none;
+}
+
+.custom_input{
+    position: relative;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #278D9F;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+.input:checked + .custom_input{
+    background-color: #278D9F;
+}
+
+.input:checked + .custom_input::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
