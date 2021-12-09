@@ -6,20 +6,20 @@ import SortFilter from '../../components/sort-filter/sort-filter'
 import ToyCard from '../../components/toy-card/toy-card'
 import data from '../../utils/data'
 
-export default function ToyPage () {
+export default function ToyPage() {
     return (
-        <div className = {toyPageStyle.toy_page}>
+        <div className={toyPageStyle.toy_page}>
             <div className={toyPageStyle.container}>
-                <div className = {toyPageStyle.filters_wrapper}>
-                    <FilterByValue/>
-                    <FilterForRange/>
-                    <SortFilter/>
+                <div className={toyPageStyle.filters_wrapper}>
+                    <FilterByValue />
+                    <FilterForRange />
+                    <SortFilter />
                 </div>
 
                 <div className={toyPageStyle.field_for_cards}>
-                {data.map((cardInfo)=> {
-                    return <ToyCard cardInfo = {cardInfo}/>
-                })}
+                    {data.map((cardInfo) => {
+                        return <ToyCard cardInfo={cardInfo} />
+                    })}
                 </div>
             </div>
 

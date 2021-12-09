@@ -1,8 +1,14 @@
-.filter_wrapper{
+.filter_wrapper {
     min-width: 420px;
-    height: 330px;
+    height: 350px;
     margin-top: 20px;
     padding: 20px 50px;
     border-radius: 10px;
     background-color: rgba(31, 75, 83, 0.96);
+    font-size: 18px;
+}
+
+.filter_title {
+    font-weight: 500;
+    font-size: 25px;
 }

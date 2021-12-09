@@ -14,7 +14,7 @@ export default function FilterByValue() {
     }
     return (
         <div className={filterByValueStyle.filter_wrapper}>
-            <h2>ФИЛЬТРЫ ПО ЗНАЧЕНИЮ</h2>
+            <h2 className={filterByValueStyle.filter_title}>ФИЛЬТРЫ ПО ЗНАЧЕНИЮ</h2>
 
             <div className={filterByValueStyle.line_filter}>
                 <p>Форма:</p>

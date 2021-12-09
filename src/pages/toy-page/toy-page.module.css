@@ -2,18 +2,20 @@
     padding-top: 84px;
 }
 
-.container{
+.container {
     max-width: 1920px;
     padding: 0 25px;
     margin: 0 auto;
 }
-.filters_wrapper{
+
+.filters_wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
-.field_for_cards{
+
+.field_for_cards {
     width: 100%;
     margin-top: 50px;
     display: flex;
