@@ -1,7 +1,17 @@
 * {
+	box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: #E4F4F5;
+}
+html {
+    height: 100%
+}
+body {
+    background-image: url(./assets/images/bg-main.jpg);
+    background-size: 100% 100%;
+	background-attachment: fixed;
+    background-size: cover;
 }
 button, input[type="submit"], input[type="reset"] {
 	background: none;

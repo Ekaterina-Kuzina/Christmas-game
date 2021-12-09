@@ -1,10 +1,5 @@
 .toy_page {
     padding-top: 84px;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../../assets/images/bg-main.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .container{
@@ -16,5 +11,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
-
+.field_for_cards{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}

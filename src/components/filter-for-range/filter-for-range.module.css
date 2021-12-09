@@ -1,0 +1,8 @@
+.filter_wrapper{
+    min-width: 420px;
+    height: 330px;
+    margin-top: 20px;
+    padding: 20px 50px;
+    border-radius: 10px;
+    background-color: rgba(31, 75, 83, 0.96);
+}
