@@ -12,6 +12,7 @@ html {
 }
 
 body {
+	padding-bottom: 100px;
 	font-family: 'IBM Plex Mono', monospace;
 	font-weight: 400;
 	background-image: url(./assets/images/bg-main.jpg);

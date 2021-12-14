@@ -2,7 +2,7 @@ import React from "react";
 import toyCardStyle from './toy-card.module.css'
 import img from '../../assets/images/toys/1.png'
 
-type ToyCardProps = {
+type TToyCardProps = {
     cardInfo: {
         num: string,
         name: string,
@@ -15,7 +15,8 @@ type ToyCardProps = {
     }
 }
 
-export default function ToyCard({ cardInfo }: ToyCardProps) {
+export default function ToyCard({ cardInfo }: TToyCardProps) {
+    
     return (
         <div className={toyCardStyle.card_wrapper}>
             <p className={toyCardStyle.card_name}>{cardInfo.name}</p>
