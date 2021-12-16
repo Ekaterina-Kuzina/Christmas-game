@@ -4,13 +4,17 @@ import FilterByValue from '../../components/filter-by-value/filter-by-value'
 import FilterForRange from '../../components/filter-for-range/filter-for-range'
 import SortFilter from '../../components/sort-filter/sort-filter'
 import ToyCard from '../../components/toy-card/toy-card'
-import data from '../../utils/data'
+import data from '../../services/utils/data'
+import {TData} from '../../services/type/data'
 
 export default function ToyPage() {
     const [stateFilterShape, setstateFilterShape] = useState<string[] | []>([])
     const [stateFilterColor, setstateFilterColor] = useState<string[] | []>([])
     const [stateFilterSize, setstateFilterSize] = useState<string[] | []>([])
     const [stateFilterFavorite, setstateFilterFavorite] = useState<boolean>(false)
+
+    const [sortOption, setSortOption] = useState('alphabet')
+
     return (
         <div className={toyPageStyle.toy_page}>
             <div className={toyPageStyle.container}>
@@ -26,12 +30,32 @@ export default function ToyPage() {
                         setstateFilterFavorite={setstateFilterFavorite}
                     />
                     <FilterForRange />
-                    <SortFilter />
+                    <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
                 </div>
 
                 <div className={toyPageStyle.field_for_cards}>
-                    {stateFilterShape.length !== 0 || stateFilterColor.length !== 0 || stateFilterSize.length !== 0 || stateFilterFavorite ?
-                        data.filter((cardInfo) => {
+                    {stateFilterShape.length !== 0 || stateFilterColor.length !== 0 || stateFilterSize.length !== 0 || stateFilterFavorite || sortOption ?
+                        data.sort((a:TData,b:TData):any=>{
+                            if(sortOption === 'alphabet'){
+                                if(a.name < b.name){
+                                    return -1
+                                }
+                                if(a.name > b.name){
+                                    return 1
+                                }
+                                return 0
+                            }
+                            if(sortOption === 'reversedAlphabet'){
+                                if(a.name > b.name){
+                                    return -1
+                                }
+                                if(a.name < b.name){
+                                    return 1
+                                }
+                                return 0
+                            }
+                        })
+                        .filter((cardInfo) => {
                             if (stateFilterShape.length !== 0) {
                                 for (let i = 0; i < stateFilterShape.length; i++) {
                                     if (cardInfo.shape === stateFilterShape[i]) {
@@ -74,6 +98,13 @@ export default function ToyPage() {
                                     return cardInfo
                                 }
                             })
+                            .sort((a: TData,b: TData):any => {
+                                if(sortOption === 'increasing'){
+                                    return +a.count - +b.count
+                                }else if(sortOption === 'decreasing'){
+                                    return +b.count - +a.count 
+                                }
+                            })
                             .map((cardInfo, index) => {
                                 return <ToyCard key={index} cardInfo={cardInfo} />
                             })
@@ -85,8 +116,6 @@ export default function ToyPage() {
                     }
                 </div>
             </div>
-
-
         </div>
     )
 }

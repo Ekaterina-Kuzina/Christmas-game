@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import filterByValueStyle from './filter-by-value.module.css'
 
 type TColorStyle = {
@@ -11,7 +11,6 @@ export default function FilterByValue({
     setstateFilterShape,
     stateFilterSize,
     setstateFilterSize,
-    stateFilterFavorite,
     setstateFilterFavorite,
 }: any) {
 
