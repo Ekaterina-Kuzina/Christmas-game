@@ -1,29 +1,15 @@
-.range_wrapper{
-    margin-top: 50px;
+.range_wrapper {
+    margin-top: 60px;
     touch-action: none;
 }
 
-.range_wrapper .input-range__track--active {
-    background: rgb(43, 193, 219) ;
-    touch-action: none;
+.range_wrapper .css-1kz0hui-MuiSlider-valueLabel {
+    background-color: initial;
+    font-size: 18px;
+    top: 0;
 }
 
-.range_wrapper .input-range__slider {
-    border: 4px solid #3f51b5;
-    background: rgb(108, 203, 223) ;
-    touch-action: none;
-}
-
-.range_wrapper .input-range__track{
-    height: 8px;
-    touch-action: none;
-}
-
-.range_wrapper .input-range__label--min .input-range__label-container , 
-.range_wrapper .input-range__label--max .input-range__label-container {
-    display: none;
-}
-.range_wrapper .input-range__label-container{
-    bottom: 5px;
-    font-size: 16px;
+.range_wrapper .css-1gv0vcd-MuiSlider-track {
+    background-color: rgb(108, 203, 223);
+    height: 6px;
 }

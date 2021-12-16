@@ -27,6 +27,16 @@ export default function ToyPage() {
         }
     }
 
+    const handleFavoriteState = (cardInfoValue:boolean)=>{
+        if (stateFilterFavorite) {
+            if (cardInfoValue === stateFilterFavorite) {
+                return true
+            }
+        } else {
+            return true
+        }
+    }
+
     return (
         <div className={toyPageStyle.toy_page}>
             <div className={toyPageStyle.container}>
@@ -78,13 +88,7 @@ export default function ToyPage() {
                             return handleStateFilters(stateFilterSize, cardInfo.size)
                         })
                         .filter((cardInfo) => {
-                            if (stateFilterFavorite) {
-                                if (cardInfo.favorite === stateFilterFavorite) {
-                                    return true
-                                }
-                            } else {
-                                return true
-                            }
+                            return handleFavoriteState(cardInfo.favorite)
                         })
                         .sort((a: TData,b: TData):any => {
                             if(sortOption === 'increasing'){
