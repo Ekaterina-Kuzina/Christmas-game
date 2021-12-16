@@ -15,6 +15,18 @@ export default function ToyPage() {
 
     const [sortOption, setSortOption] = useState('alphabet')
 
+    const handleStateFilters = (filterState: string[] ,cardInfoValue:string) => {
+        if (filterState.length !== 0) {
+            for (let i = 0; i < filterState.length; i++) {
+                if (cardInfoValue === filterState[i]) {
+                    return true
+                }
+            }
+        } else {
+            return true
+        }
+    }
+
     return (
         <div className={toyPageStyle.toy_page}>
             <div className={toyPageStyle.container}>
@@ -56,58 +68,34 @@ export default function ToyPage() {
                             }
                         })
                         .filter((cardInfo) => {
-                            if (stateFilterShape.length !== 0) {
-                                for (let i = 0; i < stateFilterShape.length; i++) {
-                                    if (cardInfo.shape === stateFilterShape[i]) {
-                                        return cardInfo
-                                    }
-                                }
-                            } else {
-                                return cardInfo
-                            }
+                            return handleStateFilters(stateFilterShape, cardInfo.shape)
 
                         })
-                            .filter((cardInfo) => {
-                                if (stateFilterColor.length !== 0) {
-                                    for (let i = 0; i < stateFilterColor.length; i++) {
-                                        if (cardInfo.color === stateFilterColor[i]) {
-                                            return cardInfo
-                                        }
-                                    }
-                                } else {
-                                    return cardInfo
+                        .filter((cardInfo) => {
+                            return handleStateFilters(stateFilterColor, cardInfo.color)
+                        })
+                        .filter((cardInfo) => {
+                            return handleStateFilters(stateFilterSize, cardInfo.size)
+                        })
+                        .filter((cardInfo) => {
+                            if (stateFilterFavorite) {
+                                if (cardInfo.favorite === stateFilterFavorite) {
+                                    return true
                                 }
-                            })
-                            .filter((cardInfo) => {
-                                if (stateFilterSize.length !== 0) {
-                                    for (let i = 0; i < stateFilterSize.length; i++) {
-                                        if (cardInfo.size === stateFilterSize[i]) {
-                                            return cardInfo
-                                        }
-                                    }
-                                } else {
-                                    return cardInfo
-                                }
-                            })
-                            .filter((cardInfo) => {
-                                if (stateFilterFavorite) {
-                                    if (cardInfo.favorite === stateFilterFavorite) {
-                                        return cardInfo
-                                    }
-                                } else {
-                                    return cardInfo
-                                }
-                            })
-                            .sort((a: TData,b: TData):any => {
-                                if(sortOption === 'increasing'){
-                                    return +a.count - +b.count
-                                }else if(sortOption === 'decreasing'){
-                                    return +b.count - +a.count 
-                                }
-                            })
-                            .map((cardInfo, index) => {
-                                return <ToyCard key={index} cardInfo={cardInfo} />
-                            })
+                            } else {
+                                return true
+                            }
+                        })
+                        .sort((a: TData,b: TData):any => {
+                            if(sortOption === 'increasing'){
+                                return +a.count - +b.count
+                            }else if(sortOption === 'decreasing'){
+                                return +b.count - +a.count 
+                            }
+                        })
+                        .map((cardInfo, index) => {
+                            return <ToyCard key={index} cardInfo={cardInfo} />
+                        })
                         :
 
                         data.map((cardInfo, index) => {
