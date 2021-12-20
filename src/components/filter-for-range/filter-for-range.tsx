@@ -3,11 +3,11 @@ import filterForRangeStyle from './filter-for-range.module.css'
 import { Slider } from '@mui/material';
 import './custom-input-range.css';
 
-export default function FilterForRange() {
-    const [inputRangeQuantity, setInputRangeQuantity] = useState([1,12])
-    const [inputRangeYear, setInputRangeYear] = useState([1940,2020])
+
+export default function FilterForRange({inputRangeQuantity, setInputRangeQuantity,inputRangeYear, setInputRangeYear}:any) {
+
     const handleChangeRangeQuantity = (e:any, newValue:any) => {
-        setInputRangeQuantity(e.target.value);
+        setInputRangeQuantity(newValue);
       };
       const handleChangeRangeYear = (e:any, newValue:any) => {
         setInputRangeYear(newValue);
@@ -16,6 +16,7 @@ export default function FilterForRange() {
         <div className={filterForRangeStyle.filter_wrapper}>
             <h2 className={filterForRangeStyle.filter_title}>ФИЛЬТРЫ ПО ДИАПАЗОНУ</h2>
             <div className='range_wrapper'>
+                <div>Количество экземпляров:</div>
                 <Slider
                     getAriaLabel={() => 'Temperature range'}
                     value={inputRangeQuantity}
@@ -23,9 +24,12 @@ export default function FilterForRange() {
                     valueLabelDisplay="on"
                     max={12}
                     min={1}
+                    sx={{mt:'35px'}}
                 />
             </div>
             <div className='range_wrapper'>
+                <div>Год приобретения:</div>
+
                 <Slider
                     getAriaLabel={() => 'Temperature range'}
                     value={inputRangeYear}
@@ -33,6 +37,7 @@ export default function FilterForRange() {
                     valueLabelDisplay="on"
                     max={2020}
                     min={1940}
+                    sx={{mt:'35px'}}
                 />
             </div>
 

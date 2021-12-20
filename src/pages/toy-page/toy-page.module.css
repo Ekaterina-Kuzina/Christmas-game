@@ -10,16 +10,24 @@
 
 .filters_wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
     flex-wrap: wrap;
 }
-
+.filters_wrapper > div{
+    flex: 0.2 1 auto ;
+}
 .field_for_cards {
     width: 100%;
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    gap: 25px;  
+    justify-content: center;
+    align-items: center;
+}
+
+.field_for_cards > div {
+    flex: 0 1 auto ;
 }

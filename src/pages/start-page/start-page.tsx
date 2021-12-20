@@ -17,7 +17,7 @@ export default function StartPage() {
             <div className={startPageStyle.wrapper}>
                 <div className={startPageStyle.start_info}>ПОМОГИТЕ БАБУШКЕ НАРЯДИТЬ ЁЛКУ</div>
                 <Link to="/toys">
-                    <Button text="Начать" />
+                    <Button text="Начать" paddingStyle = '20px 100px' />
                 </Link>
             </div>
         </div>

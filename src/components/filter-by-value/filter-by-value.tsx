@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import filterByValueStyle from './filter-by-value.module.css'
 
 type TColorStyle = {
@@ -36,7 +36,7 @@ export default function FilterByValue({
 
     }
 
-    const toggleActiveClassColorIcons = (e:React.SyntheticEvent) => {
+    const toggleActiveClassColorIcons = (e:any) => {
         let element = e.target as HTMLInputElement
 
         element.classList.toggle(`${filterByValueStyle.active_color_icon}`);
@@ -72,7 +72,6 @@ export default function FilterByValue({
             setstateFilterFavorite(false)
         }
     }
-
     return (
         <div className={filterByValueStyle.filter_wrapper}>
             <h2 className={filterByValueStyle.filter_title}>ФИЛЬТРЫ ПО ЗНАЧЕНИЮ</h2>

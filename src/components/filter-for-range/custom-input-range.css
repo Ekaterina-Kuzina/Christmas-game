@@ -1,6 +1,7 @@
 .range_wrapper {
-    margin-top: 60px;
+    margin-top: 30px;
     touch-action: none;
+    font-style: 18px;
 }
 
 .range_wrapper .css-1kz0hui-MuiSlider-valueLabel {

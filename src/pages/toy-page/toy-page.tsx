@@ -6,12 +6,16 @@ import SortFilter from '../../components/sort-filter/sort-filter'
 import ToyCard from '../../components/toy-card/toy-card'
 import data from '../../services/utils/data'
 import {TData} from '../../services/type/data'
+import filterByValueStyle from './filter-by-value.module.css'
 
 export default function ToyPage() {
     const [stateFilterShape, setstateFilterShape] = useState<string[] | []>([])
     const [stateFilterColor, setstateFilterColor] = useState<string[] | []>([])
     const [stateFilterSize, setstateFilterSize] = useState<string[] | []>([])
     const [stateFilterFavorite, setstateFilterFavorite] = useState<boolean>(false)
+
+    const [inputRangeQuantity, setInputRangeQuantity] = useState<number[]>([1,12])
+    const [inputRangeYear, setInputRangeYear] = useState<number[]>([1940,2020])
 
     const [sortOption, setSortOption] = useState('alphabet')
 
@@ -37,6 +41,12 @@ export default function ToyPage() {
         }
     }
 
+    const resetFilters = ()=>{
+        setSortOption('alphabet')
+        setstateFilterShape([])
+        console.log(stateFilterShape);
+    }
+
     return (
         <div className={toyPageStyle.toy_page}>
             <div className={toyPageStyle.container}>
@@ -51,12 +61,23 @@ export default function ToyPage() {
                         stateFilterFavorite={stateFilterFavorite}
                         setstateFilterFavorite={setstateFilterFavorite}
                     />
-                    <FilterForRange />
-                    <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
+                    <FilterForRange 
+                        inputRangeQuantity={inputRangeQuantity}  
+                        setInputRangeQuantity={setInputRangeQuantity}
+                        inputRangeYear={inputRangeYear}
+                        setInputRangeYear={setInputRangeYear}
+                    />
+                    <SortFilter 
+                        resetFilters={resetFilters}
+                        sortOption={sortOption} 
+                        setSortOption={setSortOption}
+                        stateFilterShape={stateFilterShape}
+                        setstateFilterShape={setstateFilterShape}
+                    />
                 </div>
 
                 <div className={toyPageStyle.field_for_cards}>
-                    {stateFilterShape.length !== 0 || stateFilterColor.length !== 0 || stateFilterSize.length !== 0 || stateFilterFavorite || sortOption ?
+                    {stateFilterShape.length !== 0 || stateFilterColor.length !== 0 || stateFilterSize.length !== 0 || stateFilterFavorite || sortOption ||inputRangeQuantity ?
                         data.sort((a:TData,b:TData):any=>{
                             if(sortOption === 'alphabet'){
                                 if(a.name < b.name){
@@ -89,6 +110,16 @@ export default function ToyPage() {
                         })
                         .filter((cardInfo) => {
                             return handleFavoriteState(cardInfo.favorite)
+                        })
+                        .filter((cardInfo) => {
+                            if(+cardInfo.count >= inputRangeQuantity[0] && +cardInfo.count <= inputRangeQuantity[1]){
+                                return true
+                            }
+                        })
+                        .filter((cardInfo) => {
+                            if(+cardInfo.year >= inputRangeYear[0] && +cardInfo.year <= inputRangeYear[1]){
+                                return true
+                            }
                         })
                         .sort((a: TData,b: TData):any => {
                             if(sortOption === 'increasing'){
