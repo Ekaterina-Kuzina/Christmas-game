@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import toyPageStyle from './toy-page.module.css'
 import FilterByValue from '../../components/filter-by-value/filter-by-value'
 import FilterForRange from '../../components/filter-for-range/filter-for-range'
@@ -18,6 +18,8 @@ export default function ToyPage() {
     const [inputRangeYear, setInputRangeYear] = useState<number[]>([1940,2020])
 
     const [sortOption, setSortOption] = useState('alphabet')
+
+    const [resetFilter, resetFilterSetstate] = useState(false)
 
     const handleStateFilters = (filterState: string[] ,cardInfoValue:string) => {
         if (filterState.length !== 0) {
@@ -40,12 +42,11 @@ export default function ToyPage() {
             return true
         }
     }
+    console.log(stateFilterShape);
 
-    const resetFilters = ()=>{
-        setSortOption('alphabet')
-        setstateFilterShape([])
-        console.log(stateFilterShape);
-    }
+
+    useEffect(() => {
+    }, [stateFilterShape])
 
     return (
         <div className={toyPageStyle.toy_page}>
@@ -60,6 +61,7 @@ export default function ToyPage() {
                         setstateFilterSize={setstateFilterSize}
                         stateFilterFavorite={stateFilterFavorite}
                         setstateFilterFavorite={setstateFilterFavorite}
+                        resetFilter={resetFilter}
                     />
                     <FilterForRange 
                         inputRangeQuantity={inputRangeQuantity}  
@@ -68,7 +70,6 @@ export default function ToyPage() {
                         setInputRangeYear={setInputRangeYear}
                     />
                     <SortFilter 
-                        resetFilters={resetFilters}
                         sortOption={sortOption} 
                         setSortOption={setSortOption}
                         stateFilterShape={stateFilterShape}

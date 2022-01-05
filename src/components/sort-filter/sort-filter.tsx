@@ -9,15 +9,13 @@ type TSortFilterProps = {
     setSortOption: (value:string)=> void
     stateFilterShape:string[] | []
     setstateFilterShape: (value:string[] | [])=> void
-    resetFilters:()=>void
 }
 
-export default function SortFilter({sortOption, setSortOption, setstateFilterShape, stateFilterShape , resetFilters}:TSortFilterProps) {
+export default function SortFilter({sortOption, setSortOption, setstateFilterShape, stateFilterShape }:TSortFilterProps) {
 
     const handleSortOption = (e:any) =>{
         setSortOption(e.target.value)
     }
-
 
     return (
 
@@ -30,7 +28,7 @@ export default function SortFilter({sortOption, setSortOption, setstateFilterSha
                 <option value="decreasing">По количеству по убыванию</option>
             </select>
 
-            <Button onClick ={resetFilters} text='Сброс фильтров' paddingStyle = '5px 15px'/>
+            {/* <Button  text='Сброс фильтров' paddingStyle = '5px 15px'/> */}
         </div>
     )
 }

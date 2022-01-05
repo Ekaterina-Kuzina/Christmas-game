@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useRef} from "react";
 import filterByValueStyle from './filter-by-value.module.css'
 
 type TColorStyle = {
@@ -12,8 +12,8 @@ export default function FilterByValue({
     stateFilterSize,
     setstateFilterSize,
     setstateFilterFavorite,
+    
 }: any) {
-
     const collorsForFilter = ['желтый',  'белый','красный','синий','зелёный']
     const collorsStyle: TColorStyle = {
         'желтый':'yellow' , 
@@ -40,6 +40,7 @@ export default function FilterByValue({
         let element = e.target as HTMLInputElement
 
         element.classList.toggle(`${filterByValueStyle.active_color_icon}`);
+
         if(!stateFilterColor.includes(element.dataset.color)){
             setstateFilterColor([...stateFilterColor, element.dataset.color])
         }else{
@@ -72,12 +73,14 @@ export default function FilterByValue({
             setstateFilterFavorite(false)
         }
     }
+
+
     return (
         <div className={filterByValueStyle.filter_wrapper}>
             <h2 className={filterByValueStyle.filter_title}>ФИЛЬТРЫ ПО ЗНАЧЕНИЮ</h2>
 
             <div className={filterByValueStyle.line_filter}>
-                <p>Форма:</p>
+                <p >Форма:</p>
                 <button className={`${filterByValueStyle.icon} ${filterByValueStyle.ball}`} data-shape ='шар'  onClick={(e)=>{toggleActiveClassShapeIcons(e)}}></button>
                 <button className={`${filterByValueStyle.icon} ${filterByValueStyle.bell}`} data-shape ='колокольчик' onClick={(e)=>{toggleActiveClassShapeIcons(e)}}></button>
                 <button className={`${filterByValueStyle.icon} ${filterByValueStyle.cone}`} data-shape ='шишка' onClick={(e)=>{toggleActiveClassShapeIcons(e)}}></button>
