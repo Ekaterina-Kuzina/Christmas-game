@@ -1,12 +1,21 @@
-.component_wrapper {
+.wrapper {
+
+    display: flex;
+    justify-content: space-between;
     padding-top: 84px;
+    background: rgba(25, 47, 45, 0.7);
 }
-.tree_wrapper{
+.components_wrapper {
+    width: 25%;
+}
+.tree_wrapper, .bg_wrapper, .toy_wrapper{
     display: flex;
     flex-wrap: wrap;
-    width: 25%;
     gap: 10px;
-    background: rgba(25, 47, 45, 0.7);
+}
+
+.title{
+    margin: 25px 0 15px 0;
 }
 
 .tree_block{
@@ -37,4 +46,43 @@
 .bg > img {
     width: 100%;
     height: 100%;
+}
+
+.mainTree{
+    height: 100%;
+    justify-self: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.toy_wrapper{
+    height: 560px;
+    overflow-y: auto;
+}
+
+.toy_block{
+    position: relative;
+    width: 25%;
+    width: 84px;
+    height: 84px;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.round{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #1fa9bb;
+    border-radius: 100%;
+}
+.active {
+    border: 3px solid #1fa9bb;
 }
