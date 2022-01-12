@@ -1,4 +1,7 @@
 .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -32,10 +35,27 @@
     font-size: 18px;
 }
 .link{
+    margin-right: 20px;
     text-decoration: none;
     transition: .5s;
 }
 
 .link:hover{
     color: #2BC1DB;
+}
+
+.ball{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background-image: url('../../assets/images/svg/ball-for-header.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ball > p {
+    margin-top: 5px;
 }

@@ -8,6 +8,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: false,
+    id: 1
   },
   {
     num: 'https://i.ibb.co/LrTJVPc/2.png',
@@ -18,6 +19,7 @@ const data = [
     color: 'зелёный',
     size: 'большой',
     favorite: false,
+    id: 2
   },
   {
     num: 'https://i.ibb.co/7g0gKHw/3.png',
@@ -28,6 +30,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 3
   },
   {
     num: 'https://i.ibb.co/xz94nVK/4.png',
@@ -38,6 +41,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 4
   },
   {
     num: 'https://i.ibb.co/7bgjJdb/5.png',
@@ -48,6 +52,7 @@ const data = [
     color: 'красный',
     size: 'средний',
     favorite: true,
+    id: 5
   },
   {
     num: 'https://i.ibb.co/Dw5xjv3/6.png',
@@ -58,6 +63,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 6
   },
   {
     num: 'https://i.ibb.co/qnZcwwk/7.png',
@@ -68,6 +74,7 @@ const data = [
     color: 'белый',
     size: 'средний',
     favorite: true,
+    id: 7
   },
   {
     num: 'https://i.ibb.co/QNC7sgD/8.png',
@@ -78,6 +85,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 8
   },
   {
     num: 'https://i.ibb.co/vzdtYN7/9.png',
@@ -88,6 +96,7 @@ const data = [
     color: 'белый',
     size: 'большой',
     favorite: false,
+    id: 9
   },
   {
     num: 'https://i.ibb.co/jk3vq1C/10.png',
@@ -98,6 +107,7 @@ const data = [
     color: 'белый',
     size: 'большой',
     favorite: false,
+    id: 10
   },
   {
     num: 'https://i.ibb.co/mHKKzYq/11.png',
@@ -108,6 +118,7 @@ const data = [
     color: 'белый',
     size: 'малый',
     favorite: false,
+    id: 11
   },
   {
     num: 'https://i.ibb.co/jVmxTpP/12.png',
@@ -118,6 +129,7 @@ const data = [
     color: 'белый',
     size: 'большой',
     favorite: false,
+    id: 12
   },
   {
     num: 'https://i.ibb.co/wLDt6rP/13.png',
@@ -128,6 +140,7 @@ const data = [
     color: 'синий',
     size: 'большой',
     favorite: true,
+    id: 13
   },
   {
     num: 'https://i.ibb.co/hCHyRSk/14.png',
@@ -138,6 +151,7 @@ const data = [
     color: 'синий',
     size: 'большой',
     favorite: true,
+    id: 14
   },
   {
     num: 'https://i.ibb.co/BnJyCTb/15.png',
@@ -148,6 +162,7 @@ const data = [
     color: 'синий',
     size: 'средний',
     favorite: false,
+    id: 15
   },
   {
     num: 'https://i.ibb.co/MRky1x0/16.png',
@@ -158,6 +173,7 @@ const data = [
     color: 'синий',
     size: 'средний',
     favorite: true,
+    id: 16
   },
   {
     num: 'https://i.ibb.co/0nPNm7Y/17.png',
@@ -168,6 +184,7 @@ const data = [
     color: 'красный',
     size: 'средний',
     favorite: false,
+    id: 17
   },
   {
     num: 'https://i.ibb.co/3cPBgYn/18.png',
@@ -178,6 +195,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: false,
+    id: 18
   },
   {
     num: 'https://i.ibb.co/PDJhmGM/19.png',
@@ -188,6 +206,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: false,
+    id: 19
   },
   {
     num: 'https://i.ibb.co/VLGFWJT/20.png',
@@ -198,6 +217,7 @@ const data = [
     color: 'красный',
     size: 'средний',
     favorite: true,
+    id: 20
   },
   {
     num: 'https://i.ibb.co/HHh6Sf1/21.png',
@@ -208,6 +228,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: true,
+    id: 21
   },
   {
     num: 'https://i.ibb.co/Npm7P8n/22.png',
@@ -218,6 +239,7 @@ const data = [
     color: 'желтый',
     size: 'малый',
     favorite: false,
+    id: 22
   },
   {
     num: 'https://i.ibb.co/k5mfNTR/23.png',
@@ -228,6 +250,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: false,
+    id: 23
   },
   {
     num: 'https://i.ibb.co/xhv4y47/24.png',
@@ -238,6 +261,7 @@ const data = [
     color: 'белый',
     size: 'большой',
     favorite: false,
+    id: 24
   },
   {
     num: 'https://i.ibb.co/ThSMh3G/25.png',
@@ -248,6 +272,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 25
   },
   {
     num: 'https://i.ibb.co/2vdKm31/26.png',
@@ -258,6 +283,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: false,
+    id: 26
   },
   {
     num: 'https://i.ibb.co/6Ptnqcv/27.png',
@@ -268,6 +294,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 27
   },
   {
     num: 'https://i.ibb.co/cJLGL5J/28.png',
@@ -278,6 +305,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 28
   },
   {
     num: 'https://i.ibb.co/vx0y73c/29.png',
@@ -288,6 +316,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: true,
+    id: 29
   },
   {
     num: 'https://i.ibb.co/5RyyLgn/30.png',
@@ -298,6 +327,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: true,
+    id: 30
   },
   {
     num: 'https://i.ibb.co/BcG07GS/31.png',
@@ -308,6 +338,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 31
   },
   {
     num: 'https://i.ibb.co/FV60n5K/32.png',
@@ -318,6 +349,7 @@ const data = [
     color: 'синий',
     size: 'большой',
     favorite: false,
+    id: 32
   },
   {
     num: 'https://i.ibb.co/cwDbtBP/33.png',
@@ -328,6 +360,7 @@ const data = [
     color: 'синий',
     size: 'средний',
     favorite: false,
+    id: 33
   },
   {
     num: 'https://i.ibb.co/Z6kPbZy/34.png',
@@ -338,6 +371,7 @@ const data = [
     color: 'зелёный',
     size: 'большой',
     favorite: false,
+    id: 34
   },
   {
     num: 'https://i.ibb.co/s2XC84x/35.png',
@@ -348,6 +382,7 @@ const data = [
     color: 'желтый',
     size: 'средний',
     favorite: true,
+    id: 35
   },
   {
     num: 'https://i.ibb.co/vP1QzM7/36.png',
@@ -358,6 +393,7 @@ const data = [
     color: 'синий',
     size: 'большой',
     favorite: false,
+    id: 36
   },
   {
     num: 'https://i.ibb.co/4R1L6yL/37.png',
@@ -368,6 +404,7 @@ const data = [
     color: 'зелёный',
     size: 'большой',
     favorite: false,
+    id: 37
   },
   {
     num: 'https://i.ibb.co/yQFzCrD/38.png',
@@ -378,6 +415,7 @@ const data = [
     color: 'синий',
     size: 'большой',
     favorite: false,
+    id: 38
   },
   {
     num: 'https://i.ibb.co/tX5GkMf/39.png',
@@ -388,6 +426,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 39
   },
   {
     num: 'https://i.ibb.co/dBtqBTK/40.png',
@@ -398,6 +437,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: false,
+    id: 40
   },
   {
     num: 'https://i.ibb.co/nwkvtpt/41.png',
@@ -408,6 +448,7 @@ const data = [
     color: 'белый',
     size: 'большой',
     favorite: false,
+    id: 41
   },
   {
     num: 'https://i.ibb.co/vZpbQyv/42.png',
@@ -418,6 +459,7 @@ const data = [
     color: 'зелёный',
     size: 'средний',
     favorite: false,
+    id: 42
   },
   {
     num: 'https://i.ibb.co/przwZN9/43.png',
@@ -428,6 +470,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 43
   },
   {
     num: 'https://i.ibb.co/pf4753W/44.png',
@@ -438,6 +481,7 @@ const data = [
     color: 'красный',
     size: 'средний',
     favorite: true,
+    id: 44
   },
   {
     num: 'https://i.ibb.co/LQ9FTWJ/45.png',
@@ -448,6 +492,7 @@ const data = [
     color: 'белый',
     size: 'большой',
     favorite: false,
+    id: 45
   },
   {
     num: 'https://i.ibb.co/D8BK3LF/46.png',
@@ -458,6 +503,7 @@ const data = [
     color: 'красный',
     size: 'малый',
     favorite: false,
+    id: 46
   },
   {
     num: 'https://i.ibb.co/hf81Hr8/47.png',
@@ -468,6 +514,7 @@ const data = [
     color: 'красный',
     size: 'малый',
     favorite: false,
+    id: 47
   },
   {
     num: 'https://i.ibb.co/b7KfmZ7/48.png',
@@ -478,6 +525,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: false,
+    id: 48
   },
   {
     num: 'https://i.ibb.co/X3szLt1/49.png',
@@ -488,6 +536,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: false,
+    id: 49
   },
   {
     num: 'https://i.ibb.co/S7JYV5R/50.png',
@@ -498,6 +547,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: false,
+    id: 50
   },
   {
     num: 'https://i.ibb.co/0q8yhTh/51.png',
@@ -508,6 +558,7 @@ const data = [
     color: 'красный',
     size: 'малый',
     favorite: false,
+    id: 51
   },
   {
     num: 'https://i.ibb.co/wykXPKK/52.png',
@@ -518,6 +569,7 @@ const data = [
     color: 'красный',
     size: 'большой',
     favorite: true,
+    id: 52
   },
   {
     num: 'https://i.ibb.co/jb3V8Kx/53.png',
@@ -528,6 +580,7 @@ const data = [
     color: 'белый',
     size: 'большой',
     favorite: false,
+    id: 53
   },
   {
     num: 'https://i.ibb.co/CsVjgCG/54.png',
@@ -538,6 +591,7 @@ const data = [
     color: 'зелёный',
     size: 'большой',
     favorite: false,
+    id: 54
   },
   {
     num: 'https://i.ibb.co/jkwLJnY/55.png',
@@ -548,6 +602,7 @@ const data = [
     color: 'желтый',
     size: 'большой',
     favorite: false,
+    id: 55
   },
   {
     num: 'https://i.ibb.co/jRrYMWw/56.png',
@@ -558,6 +613,7 @@ const data = [
     color: 'желтый',
     size: 'малый',
     favorite: false,
+    id: 56
   },
   {
     num: 'https://i.ibb.co/9GFzq7m/57.png',
@@ -568,6 +624,7 @@ const data = [
     color: 'желтый',
     size: 'средний',
     favorite: false,
+    id: 57
   },
   {
     num: 'https://i.ibb.co/4Z8QJtR/58.png',
@@ -578,6 +635,7 @@ const data = [
     color: 'белый',
     size: 'средний',
     favorite: false,
+    id: 58
   },
   {
     num: 'https://i.ibb.co/JnCFn60/59.png',
@@ -588,6 +646,7 @@ const data = [
     color: 'желтый',
     size: 'средний',
     favorite: false,
+    id: 59
   },
   {
     num: 'https://i.ibb.co/D9sB8d6/60.png',
@@ -598,6 +657,7 @@ const data = [
     color: 'белый',
     size: 'средний',
     favorite: true,
+    id: 60
   },
 ];
 

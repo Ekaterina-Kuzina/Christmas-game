@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import toyCardStyle from './toy-card.module.css'
 import img from '../../assets/images/toys/1.png'
 
@@ -12,13 +12,23 @@ type TToyCardProps = {
         color: string,
         size: string,
         favorite: boolean,
+        id: number,
     }
 }
 
 export default function ToyCard({ cardInfo }: TToyCardProps) {
-    
+    const [choosedToyCard, choosedToyCardSetState] = useState<any>([])
+    const [activeCard, activeCardSetState] = useState(false)
+
+    //change this part 
+    const chooseCard = () =>{
+        activeCardSetState(!activeCard)
+        choosedToyCardSetState([ cardInfo.id])
+
+    }
+    console.log(choosedToyCard);
     return (
-        <div className={toyCardStyle.card_wrapper}>
+        <div className={toyCardStyle.card_wrapper} onClick={()=>{chooseCard()}}>
             <p className={toyCardStyle.card_name}>{cardInfo.name}</p>
             <div className={toyCardStyle.info_wrapper}>
                 <div className={toyCardStyle.info_img}>
@@ -53,6 +63,7 @@ export default function ToyCard({ cardInfo }: TToyCardProps) {
                 </div>
             </div>
 
+            <div className={toyCardStyle.picker} style={{backgroundColor: activeCard? '#CBB77A':'#2BC1DB'}} ></div>
         </div>
     )
 }

@@ -39,17 +39,6 @@ export default function ChristmasTreePage() {
             refItem.current.children[index].classList.add(christmasTreePageStyle.active)
         }
     }
-    // const addActive = (index: number) => {
-    //     if (treesCollection.current) {
-    //         let arr = Array.from(treesCollection.current.children);
-
-    //         arr.forEach((item) => {
-    //             item.classList.remove(christmasTreePageStyle.active)
-    //         })
-
-    //         treesCollection.current.children[index].classList.add(christmasTreePageStyle.active)
-    //     }
-    // }
 
     useEffect(() => {
         if(treesCollection.current){
@@ -69,12 +58,13 @@ export default function ChristmasTreePage() {
                 <div ref={treesCollection} className={christmasTreePageStyle.tree_wrapper}>
                     {treeData.map((imgItem, index) => {
                         
-                        return (
-                            <div key={index} style={{ backgroundImage: `url(${imgItem})` }} className={`${christmasTreePageStyle.tree_block}`} onClick={() => {
-                                treeSetState(imgItem)
-                                addActive(treesCollection,index)
-                            }}></div>
-                        )
+                            return (
+                                <div key={index} style={{ backgroundImage: `url(${imgItem})` }} className={`${christmasTreePageStyle.tree_block}`} onClick={() => {
+                                    treeSetState(imgItem)
+                                    addActive(treesCollection, index)
+                                }}></div>
+                            )
+
                     })}
                 </div>
 
